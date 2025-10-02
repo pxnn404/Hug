@@ -1,0 +1,183 @@
+/* style.css */
+
+/* ------------------------------------- */
+/* 1. Global & Basic Setup */
+/* ------------------------------------- */
+body {
+    font-family: 'Kanit', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f0f8ff; /* สีฟ้าอ่อนนุ่มนวล */
+    color: #333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    text-align: center;
+}
+
+.header {
+    background-color: #a0c4ff; /* สีฟ้าพาสเทล */
+    color: white;
+    padding: 15px 0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 { margin: 0; font-weight: 600; font-size: 1.5rem; }
+
+/* ------------------------------------- */
+/* 2. Main Content Area (หน้าจอหลักของการโต้ตอบ) */
+/* ------------------------------------- */
+.container {
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 40px 20px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative; 
+    cursor: default;
+}
+
+/* Overlay สำหรับการคลิกเปลี่ยนหน้า */
+.click-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 10;
+}
+
+.clickable {
+    cursor: pointer;
+}
+
+/* ------------------------------------- */
+/* 3. Text & Input Styling */
+/* ------------------------------------- */
+.main-text {
+    font-size: 2.2rem;
+    font-weight: 600;
+    line-height: 1.6;
+    color: #2c3e50;
+    max-width: 90%;
+    min-height: 150px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    text-align: center;
+}
+
+.input-area {
+    width: 90%;
+    max-width: 500px;
+    margin: 20px auto;
+}
+
+textarea {
+    width: 100%;
+    min-height: 120px;
+    padding: 15px;
+    border: 2px solid #b3e0ff;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    font-family: 'Kanit', sans-serif;
+    resize: vertical;
+    transition: border-color 0.3s;
+}
+
+textarea:focus {
+    border-color: #3498db;
+    outline: none;
+}
+
+/* สไตล์สำหรับปุ่มตัวเลือก (Multiple Choice) */
+.option-button-group {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.option-button {
+    background-color: #ffffff;
+    color: #3498db;
+    border: 2px solid #3498db;
+    padding: 10px 20px;
+    font-size: 1rem;
+    font-weight: 500;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: all 0.2s;
+    margin: 5px;
+}
+
+.option-button:hover {
+    background-color: #eaf6ff;
+}
+
+/* ------------------------------------- */
+/* 4. Button & Final Letter Styling */
+/* ------------------------------------- */
+.button-primary {
+    background-color: #3498db; 
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.1s;
+    margin-top: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.button-primary:hover { background-color: #2980b9; transform: translateY(-2px); }
+
+.letter-box {
+    background-color: #fffacd; 
+    border: 1px dashed #f1c40f;
+    padding: 25px;
+    border-radius: 10px;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    text-align: left;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+    width: 90%;
+    max-width: 500px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+/* ------------------------------------- */
+/* 5. Animation (Fade in/out) */
+/* ------------------------------------- */
+.fade-transition {
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out;
+    text-align: center;
+}
+.visible {
+    opacity: 1;
+}
+
+/* ------------------------------------- */
+/* 6. Footer */
+/* ------------------------------------- */
+.footer {
+    background-color: #ecf0f1;
+    color: #7f8c8d;
+    padding: 15px 0;
+    font-size: 0.9rem;
+}
+
+/* Responsive adjustments */
+@media (max-width: 600px) {
+    .main-text { font-size: 1.8rem; min-height: 120px; }
+    .letter-box { font-size: 1rem; }
+    .option-button { font-size: 0.9rem; padding: 8px 15px; }
+}
